@@ -12,7 +12,7 @@ ADICAO[-]
 SUBTRACAO[+]
 ESCOPO[}{]
 PARAMETRO[)(]
-FINAL DE COMANDO[,.]
+FINAL_DE_COMANDO[,.]
 
 %%
 oicini                {printf("Reservada: %s\n",yytext);}
@@ -30,11 +30,11 @@ aiel                  {printf("Reservada: %s\n",yytext);}
 ")"                   {printf("Inicio dos parametros: %s\n", yytext);}
 "("                   {printf("Fim dos parametros: %s\n", yytext);}
 ",."                  {printf("Fim da linha: %s\n", yytext);}
-{DIGITO}+             {printf("Inteiro: %s\n", yytext);}
-{DIGITO}+"."{DIGITO}* {printf("Real: %s\n", yytext);}
-{ID}+                 {printf("Identificador: %s\n", yytext);}
+{DIGITO}+             {printf("Orietni: %s\n", yytext);}
+{DIGITO}+"."{DIGITO}* {printf("Laer: %s\n", yytext);}
+{ID}+                 {printf("Rav: %s\n", yytext);}
 %%
-/* recomendavel declara sempre funcao yywrap() */
+
 int yywrap();
 
 int main(void)
